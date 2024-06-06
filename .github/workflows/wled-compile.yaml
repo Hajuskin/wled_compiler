@@ -1,0 +1,6 @@
+[env:custom_build]
+extends = env:esp32dev
+build_flags = ${env:esp32dev.build_flags} -D WLED_ENABLE_MQTT -D WLED_ENABLE_WEBSOCKETS ${esp32.AR_build_flags} -D USERMOD_MULTI_RELAY
+lib_deps = 
+  ${env:esp32dev.lib_deps}
+  ${esp32.AR_lib_deps}
